@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Calculator &mdash; Verdant Horizon</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.htm" class="nav-brand">Verdant <span>Horizon</span></a>
+    <ul class="nav-links">
+      <li><a href="index.htm">Home</a></li>
+      <li><button>About</button><ul class="dropdown-menu"><li><a href="our-science.htm">Our Science</a></li><li><a href="team.htm">Team</a></li><li><a href="mission.htm">Mission &amp; Vision</a></li><li><a href="partners.htm">Partners</a></li><li><a href="careers.htm">Careers</a></li><li><a href="accountability.htm">Our Accountability</a></li><li><a href="how-we-work.htm">How We Work</a></li><li><a href="history.htm">Our History</a></li></ul></li>
+      <li><button>What We Do</button><ul class="dropdown-menu"><li><a href="climate.htm">Tackle Climate Change</a></li><li><a href="ocean.htm">Protect Ocean, Land &amp; Fresh Water</a></li><li><a href="food.htm">Provide Food &amp; Water</a></li><li><a href="perspectives.htm">Perspectives</a></li><li><a href="reports.htm">Reports</a></li><li><a href="data.htm">Data &amp; Tools</a></li></ul></li>
+      <li><button>Get Involved</button><ul class="dropdown-menu"><li><a href="volunteer.htm">Volunteer</a></li><li><a href="events.htm">Attend Events</a></li><li><a href="take-action.htm">Take Action</a></li><li><a href="carbon-calculator.htm">Carbon Footprint Calculator</a></li><li><a href="explore-places.htm">Explore Places We Protect</a></li><li><a href="educational-resources.htm">Educational Resources</a></li></ul></li>
+      <li><button>Resources</button><ul class="dropdown-menu"><li><a href="blog.htm">Blog</a></li><li><a href="news.htm">News</a></li><li><a href="faq.htm">FAQ</a></li><li><a href="newsletter.htm">Newsletter</a></li><li><a href="impact-report.htm">Impact Report</a></li><li><a href="annual-report.htm">Annual Report</a></li><li><a href="press.htm">Press &amp; Media</a></li></ul></li>
+      <li><button>Give</button><ul class="dropdown-menu"><li><a href="donate.htm">Donate</a></li><li><a href="membership.htm">Become a Member</a></li><li><a href="renew.htm">Renew Membership</a></li><li><a href="give-monthly.htm">Give Monthly</a></li><li><a href="gift-estate.htm">Gift &amp; Estate Planning</a></li><li><a href="other-ways.htm">Other Ways to Give</a></li></ul></li>
+      <li><a href="contact.htm" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1600&q=80');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="section-tag">Get Involved</span>
+      <h1>Know your <em>number</em>.<br>Then reduce it.</h1>
+      <p>Your carbon footprint is the first honest conversation between you and the planet. Let's have it.</p>
+    </div>
+  </div>
+  <div class="breadcrumb"><a href="index.htm">Home</a><span>/</span>Get Involved<span>/</span>Carbon Footprint Calculator</div>
+  <div class="calculator-section">
+    <div>
+      <span class="section-tag">Your Footprint</span>
+      <h2 class="section-title">Estimate your annual<br><em>carbon emissions</em></h2>
+      <p class="section-lead">Fill in the fields below to get an estimate of your annual carbon footprint. We don't store your data — this runs entirely in your browser.</p>
+      <p class="section-lead" style="margin-top:14px;">The global average is about 4 tonnes of CO&sup2; per person per year. The average in high-income countries is closer to 10-16 tonnes. The Paris Agreement implies getting to around 2 tonnes per person by 2050.</p>
+    </div>
+    <div class="calc-form">
+      <h3 style="font-family:var(--font-display);color:var(--forest);margin-bottom:24px;font-size:1.2rem;">Your details</h3>
+      <div class="calc-group">
+        <label for="flights">Return flights per year</label>
+        <input type="number" id="flights" min="0" max="50" value="2" placeholder="e.g. 4">
+      </div>
+      <div class="calc-group">
+        <label for="car">Car travel (km per week)</label>
+        <input type="number" id="car" min="0" max="2000" value="150" placeholder="e.g. 200">
+      </div>
+      <div class="calc-group">
+        <label for="diet">Diet type</label>
+        <select id="diet">
+          <option value="4.5">Heavy meat eater</option>
+          <option value="3.3" selected>Moderate meat eater</option>
+          <option value="2.5">Low meat / pescatarian</option>
+          <option value="1.7">Vegetarian</option>
+          <option value="1.5">Vegan</option>
+        </select>
+      </div>
+      <div class="calc-group">
+        <label for="home">Home energy use</label>
+        <select id="home">
+          <option value="3.5">Large house, gas heating</option>
+          <option value="2.5" selected>Average home, gas heating</option>
+          <option value="1.8">Average home, heat pump</option>
+          <option value="1.2">Small flat, electric</option>
+          <option value="0.8">Green energy tariff</option>
+        </select>
+      </div>
+      <button type="button" class="btn-primary" style="width:100%;" onclick="calcCarbon()">Calculate My Footprint</button>
+      <div class="calc-result" id="calcResult">
+        <div class="calc-result-num" id="calcNum">--</div>
+        <div class="calc-result-label">tonnes CO&sup2; per year</div>
+        <p id="calcMsg" style="margin-top:14px;font-size:0.82rem;color:rgba(245,240,232,0.6);line-height:1.6;"></p>
+      </div>
+    </div>
+  </div>
+  <div class="cta-band">
+    <h2>Offset what you can't yet reduce</h2>
+    <p>We run verified, community-led carbon offset projects in forest protection and regenerative agriculture. Every tonne offset funds real conservation.</p>
+    <div class="cta-actions"><a href="donate.htm" class="btn-primary">Support Our Projects</a><a href="take-action.htm" class="btn-outline">Reduce Your Footprint</a></div>
+  </div>
+  <script>
+    function calcCarbon() {
+      var flights = parseFloat(document.getElementById('flights').value) || 0;
+      var car     = parseFloat(document.getElementById('car').value) || 0;
+      var diet    = parseFloat(document.getElementById('diet').value);
+      var home    = parseFloat(document.getElementById('home').value);
+      var total   = (flights * 0.9) + (car * 0.052 * 52 / 1000) + diet + home;
+      total = Math.round(total * 10) / 10;
+      document.getElementById('calcNum').textContent = total;
+      var msg = '';
+      if (total < 4)       msg = "You're below the global average of 4 tonnes — well done. There's still room to go further.";
+      else if (total < 8)  msg = "You're around the global average. A few targeted changes could bring you below it.";
+      else if (total < 14) msg = "Your footprint is above average for a high-income country. Flights and diet are likely the biggest levers.";
+      else                 msg = "Your footprint is high. Flights are usually the biggest single factor — even cutting one long-haul flight makes a significant difference.";
+      document.getElementById('calcMsg').textContent = msg;
+      document.getElementById('calcResult').classList.add('visible');
+    }
+  </script>
+  <footer>
+    <div class="footer-grid">
+      <div><div class="footer-brand">Verdant <span>Horizon</span></div><p class="footer-tagline">Working at the intersection of science, policy, and community action to protect the natural systems our world depends on.</p><div class="footer-social"><a href="#" class="social-btn">&#x1D54F;</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">f</a><a href="#" class="social-btn">&#9654;</a></div></div>
+      <div class="footer-col"><h5>About</h5><ul><li><a href="mission.htm">Mission &amp; Vision</a></li><li><a href="team.htm">Our Team</a></li><li><a href="our-science.htm">Our Science</a></li><li><a href="history.htm">Our History</a></li><li><a href="careers.htm">Careers</a></li></ul></div>
+      <div class="footer-col"><h5>Our Work</h5><ul><li><a href="climate.htm">Climate Change</a></li><li><a href="ocean.htm">Ocean &amp; Land</a></li><li><a href="food.htm">Food &amp; Water</a></li><li><a href="perspectives.htm">Perspectives</a></li><li><a href="data.htm">Data &amp; Tools</a></li></ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul><li><a href="blog.htm">Blog</a></li><li><a href="news.htm">News</a></li><li><a href="impact-report.htm">Impact Report</a></li><li><a href="annual-report.htm">Annual Report</a></li><li><a href="faq.htm">FAQ</a></li></ul></div>
+      <div class="footer-col"><h5>Give</h5><ul><li><a href="donate.htm">Donate</a></li><li><a href="membership.htm">Membership</a></li><li><a href="give-monthly.htm">Give Monthly</a></li><li><a href="volunteer.htm">Volunteer</a></li><li><a href="contact.htm">Contact Us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Verdant Horizon. All rights reserved.</span><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Settings</a></div></div>
+  </footer>
+</body>
+</html>

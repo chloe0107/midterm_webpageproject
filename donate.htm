@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate &mdash; Verdant Horizon</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.htm" class="nav-brand">Verdant <span>Horizon</span></a>
+    <ul class="nav-links">
+      <li><a href="index.htm">Home</a></li>
+      <li><button>About</button><ul class="dropdown-menu"><li><a href="our-science.htm">Our Science</a></li><li><a href="team.htm">Team</a></li><li><a href="mission.htm">Mission &amp; Vision</a></li><li><a href="partners.htm">Partners</a></li><li><a href="careers.htm">Careers</a></li><li><a href="accountability.htm">Our Accountability</a></li><li><a href="how-we-work.htm">How We Work</a></li><li><a href="history.htm">Our History</a></li></ul></li>
+      <li><button>What We Do</button><ul class="dropdown-menu"><li><a href="climate.htm">Tackle Climate Change</a></li><li><a href="ocean.htm">Protect Ocean, Land &amp; Fresh Water</a></li><li><a href="food.htm">Provide Food &amp; Water</a></li><li><a href="perspectives.htm">Perspectives</a></li><li><a href="reports.htm">Reports</a></li><li><a href="data.htm">Data &amp; Tools</a></li></ul></li>
+      <li><button>Get Involved</button><ul class="dropdown-menu"><li><a href="volunteer.htm">Volunteer</a></li><li><a href="events.htm">Attend Events</a></li><li><a href="take-action.htm">Take Action</a></li><li><a href="carbon-calculator.htm">Carbon Footprint Calculator</a></li><li><a href="explore-places.htm">Explore Places We Protect</a></li><li><a href="educational-resources.htm">Educational Resources</a></li></ul></li>
+      <li><button>Resources</button><ul class="dropdown-menu"><li><a href="blog.htm">Blog</a></li><li><a href="news.htm">News</a></li><li><a href="faq.htm">FAQ</a></li><li><a href="newsletter.htm">Newsletter</a></li><li><a href="impact-report.htm">Impact Report</a></li><li><a href="annual-report.htm">Annual Report</a></li><li><a href="press.htm">Press &amp; Media</a></li></ul></li>
+      <li><button>Give</button><ul class="dropdown-menu"><li><a href="donate.htm">Donate</a></li><li><a href="membership.htm">Become a Member</a></li><li><a href="renew.htm">Renew Membership</a></li><li><a href="give-monthly.htm">Give Monthly</a></li><li><a href="gift-estate.htm">Gift &amp; Estate Planning</a></li><li><a href="other-ways.htm">Other Ways to Give</a></li></ul></li>
+      <li><a href="contact.htm" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=1600&q=80');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="section-tag">Give</span>
+      <h1>Your gift goes<br>straight to the <em>field</em></h1>
+      <p>84 cents of every dollar funds conservation work on the ground. No fluff, no overhead bloat — just real impact.</p>
+    </div>
+  </div>
+  <div class="breadcrumb"><a href="index.htm">Home</a><span>/</span>Give<span>/</span>Donate</div>
+  <div class="donate-section">
+    <div>
+      <span class="section-tag">Make a Gift</span>
+      <h2 class="section-title">Choose your <em>impact</em></h2>
+      <p class="section-lead">Every gift matters, whatever the size. Pick an amount that works for you, or give monthly to multiply your impact over time.</p>
+      <div class="donation-amounts">
+        <button class="amount-btn" onclick="selectAmount(this,'25')">$25</button>
+        <button class="amount-btn selected" onclick="selectAmount(this,'50')">$50</button>
+        <button class="amount-btn" onclick="selectAmount(this,'100')">$100</button>
+        <button class="amount-btn" onclick="selectAmount(this,'250')">$250</button>
+        <button class="amount-btn" onclick="selectAmount(this,'500')">$500</button>
+        <button class="amount-btn" onclick="selectAmount(this,'1000')">$1,000</button>
+        <div class="custom-amount"><span>$</span><input type="number" id="customAmt" placeholder="Other amount" min="1"></div>
+      </div>
+      <div style="display:flex;gap:12px;margin-top:24px;">
+        <a href="#" class="btn-primary" style="flex:1;text-align:center;">Give Once</a>
+        <a href="give-monthly.htm" class="btn-outline" style="flex:1;text-align:center;border-color:var(--clay);color:var(--clay);">Give Monthly</a>
+      </div>
+      <div class="donate-impact">
+        <h4>What your gift does</h4>
+        <div class="impact-line">$25 protects one hectare of threatened forest for a year</div>
+        <div class="impact-line">$50 trains a community forest guardian for three months</div>
+        <div class="impact-line">$100 funds a full day of reef monitoring by our marine team</div>
+        <div class="impact-line">$250 supports one smallholder farmer through our regenerative transition program</div>
+        <div class="impact-line">$1,000 funds our carbon monitoring sensors for an entire year at one forest site</div>
+      </div>
+    </div>
+    <div>
+      <span class="section-tag">Why give to us</span>
+      <h2 class="section-title">Your trust is<br><em>everything</em> to us</h2>
+      <p class="section-lead">We've been transparent about our finances since 1982. Independently audited, fully disclosed, no exceptions.</p>
+      <img class="inline-photo" src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80" alt="Field team working in a forest" style="height:260px;margin:24px 0;">
+      <div class="pull-quote"><p>"I've supported Verdant Horizon for twelve years because they're the only organisation that's ever told me about a program that didn't work."</p><cite>— Sarah M., member since 2014</cite></div>
+    </div>
+  </div>
+  <script>
+    function submitContact(e) {
+      e.preventDefault();
+      document.getElementById('contactConfirm').style.display = 'block';
+    }
+  </script>
+  <footer>
+    <div class="footer-grid">
+      <div><div class="footer-brand">Verdant <span>Horizon</span></div><p class="footer-tagline">Working at the intersection of science, policy, and community action to protect the natural systems our world depends on.</p><div class="footer-social"><a href="#" class="social-btn">&#x1D54F;</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">f</a><a href="#" class="social-btn">&#9654;</a></div></div>
+      <div class="footer-col"><h5>About</h5><ul><li><a href="mission.htm">Mission &amp; Vision</a></li><li><a href="team.htm">Our Team</a></li><li><a href="our-science.htm">Our Science</a></li><li><a href="history.htm">Our History</a></li><li><a href="careers.htm">Careers</a></li></ul></div>
+      <div class="footer-col"><h5>Our Work</h5><ul><li><a href="climate.htm">Climate Change</a></li><li><a href="ocean.htm">Ocean &amp; Land</a></li><li><a href="food.htm">Food &amp; Water</a></li><li><a href="perspectives.htm">Perspectives</a></li><li><a href="data.htm">Data &amp; Tools</a></li></ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul><li><a href="blog.htm">Blog</a></li><li><a href="news.htm">News</a></li><li><a href="impact-report.htm">Impact Report</a></li><li><a href="annual-report.htm">Annual Report</a></li><li><a href="faq.htm">FAQ</a></li></ul></div>
+      <div class="footer-col"><h5>Give</h5><ul><li><a href="donate.htm">Donate</a></li><li><a href="membership.htm">Membership</a></li><li><a href="give-monthly.htm">Give Monthly</a></li><li><a href="volunteer.htm">Volunteer</a></li><li><a href="contact.htm">Contact Us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Verdant Horizon. All rights reserved.</span><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Settings</a></div></div>
+  </footer>
+</body>
+</html>

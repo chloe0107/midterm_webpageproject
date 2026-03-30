@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Give Monthly &mdash; Verdant Horizon</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>  
+  <nav class="navbar">
+    <a href="index.htm" class="nav-brand">Verdant <span>Horizon</span></a>
+    <ul class="nav-links">
+      <li><a href="index.htm">Home</a></li>
+      <li><button>About</button><ul class="dropdown-menu"><li><a href="our-science.htm">Our Science</a></li><li><a href="team.htm">Team</a></li><li><a href="mission.htm">Mission &amp; Vision</a></li><li><a href="partners.htm">Partners</a></li><li><a href="careers.htm">Careers</a></li><li><a href="accountability.htm">Our Accountability</a></li><li><a href="how-we-work.htm">How We Work</a></li><li><a href="history.htm">Our History</a></li></ul></li>
+      <li><button>What We Do</button><ul class="dropdown-menu"><li><a href="climate.htm">Tackle Climate Change</a></li><li><a href="ocean.htm">Protect Ocean, Land &amp; Fresh Water</a></li><li><a href="food.htm">Provide Food &amp; Water</a></li><li><a href="perspectives.htm">Perspectives</a></li><li><a href="reports.htm">Reports</a></li><li><a href="data.htm">Data &amp; Tools</a></li></ul></li>
+      <li><button>Get Involved</button><ul class="dropdown-menu"><li><a href="volunteer.htm">Volunteer</a></li><li><a href="events.htm">Attend Events</a></li><li><a href="take-action.htm">Take Action</a></li><li><a href="carbon-calculator.htm">Carbon Footprint Calculator</a></li><li><a href="explore-places.htm">Explore Places We Protect</a></li><li><a href="educational-resources.htm">Educational Resources</a></li></ul></li>
+      <li><button>Resources</button><ul class="dropdown-menu"><li><a href="blog.htm">Blog</a></li><li><a href="news.htm">News</a></li><li><a href="faq.htm">FAQ</a></li><li><a href="newsletter.htm">Newsletter</a></li><li><a href="impact-report.htm">Impact Report</a></li><li><a href="annual-report.htm">Annual Report</a></li><li><a href="press.htm">Press &amp; Media</a></li></ul></li>
+      <li><button>Give</button><ul class="dropdown-menu"><li><a href="donate.htm">Donate</a></li><li><a href="membership.htm">Become a Member</a></li><li><a href="renew.htm">Renew Membership</a></li><li><a href="give-monthly.htm">Give Monthly</a></li><li><a href="gift-estate.htm">Gift &amp; Estate Planning</a></li><li><a href="other-ways.htm">Other Ways to Give</a></li></ul></li>
+      <li><a href="contact.htm" class="nav-cta">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80');"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <span class="section-tag">Give</span>
+      <h1>The most powerful<br>thing you can do is <em>keep showing up</em></h1>
+      <p>A monthly gift &mdash; even a small one &mdash; does more for conservation than a large one-off donation. Here's why, and how to set one up in two minutes.</p>
+    </div>
+  </div>
+  <div class="breadcrumb"><a href="index.htm">Home</a><span>/</span>Give<span>/</span>Give Monthly</div>
+  <div class="donate-section">
+    <div>
+      <span class="section-tag">Set up monthly giving</span>
+      <h2 class="section-title">Choose your <em>monthly amount</em></h2>
+      <p class="section-lead">You can change or cancel your monthly gift at any time. There's no minimum commitment and no cancellation fee &mdash; ever.</p>
+      <div class="donation-amounts">
+        <button class="amount-btn" onclick="selectAmount(this,'5')">$5</button>
+        <button class="amount-btn selected" onclick="selectAmount(this,'10')">$10</button>
+        <button class="amount-btn" onclick="selectAmount(this,'20')">$20</button>
+        <button class="amount-btn" onclick="selectAmount(this,'35')">$35</button>
+        <button class="amount-btn" onclick="selectAmount(this,'50')">$50</button>
+        <button class="amount-btn" onclick="selectAmount(this,'100')">$100</button>
+        <div class="custom-amount"><span>$</span><input type="number" id="customAmt" placeholder="Other amount" min="1"></div>
+      </div>
+      <a href="donate.htm" class="btn-primary" style="display:block;text-align:center;margin-top:24px;">Start Monthly Giving</a>
+      <div class="donate-impact" style="margin-top:24px;">
+        <h4>What a monthly gift adds up to</h4>
+        <div class="impact-line">$10/month = $120/year = one full week of reef monitoring</div>
+        <div class="impact-line">$20/month = $240/year = one community forest guardian for six months</div>
+        <div class="impact-line">$50/month = $600/year = one hectare of high-carbon forest protected for a year</div>
+      </div>
+    </div>
+    <div>
+      <span class="section-tag">Why monthly giving matters</span>
+      <h2 class="section-title">Consistent funding<br><em>changes everything</em></h2>
+      <p class="section-lead">When we know what our income will be month to month, we can make multi-year commitments to field programs. We can hire local staff and keep them employed. We can sign long-term land protection agreements. One-off donations are wonderful &mdash; but monthly giving is what lets us plan.</p>
+      <p class="section-lead" style="margin-top:14px;">Monthly donors also cost less to support than one-off donors, which means more of your money goes directly to the work. The average monthly donor gives 42% more per year than one-off donors because they stick with us through the quieter months as well as the big moments.</p>
+      <img class="inline-photo" src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=800&q=80" alt="Field team in a forest" style="height:260px;margin:24px 0;">
+    </div>
+  </div>
+  <script>function selectAmount(btn,val){document.querySelectorAll('.amount-btn').forEach(function(b){b.classList.remove('selected');});btn.classList.add('selected');document.getElementById('customAmt').value='';}</script>
+  <div class="cta-band"><h2>Rather give once?</h2><p>That's completely fine too. Any support you can give makes a real difference.</p><div class="cta-actions"><a href="donate.htm" class="btn-primary">Make a One-Off Gift</a><a href="membership.htm" class="btn-outline">Become a Member</a></div></div>
+  <footer>
+    <div class="footer-grid">
+      <div><div class="footer-brand">Verdant <span>Horizon</span></div><p class="footer-tagline">Working at the intersection of science, policy, and community action to protect the natural systems our world depends on.</p><div class="footer-social"><a href="#" class="social-btn">&#x1D54F;</a><a href="#" class="social-btn">in</a><a href="#" class="social-btn">f</a><a href="#" class="social-btn">&#9654;</a></div></div>
+      <div class="footer-col"><h5>About</h5><ul><li><a href="mission.htm">Mission &amp; Vision</a></li><li><a href="team.htm">Our Team</a></li><li><a href="our-science.htm">Our Science</a></li><li><a href="history.htm">Our History</a></li><li><a href="careers.htm">Careers</a></li></ul></div>
+      <div class="footer-col"><h5>Our Work</h5><ul><li><a href="climate.htm">Climate Change</a></li><li><a href="ocean.htm">Ocean &amp; Land</a></li><li><a href="food.htm">Food &amp; Water</a></li><li><a href="perspectives.htm">Perspectives</a></li><li><a href="data.htm">Data &amp; Tools</a></li></ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul><li><a href="blog.htm">Blog</a></li><li><a href="news.htm">News</a></li><li><a href="impact-report.htm">Impact Report</a></li><li><a href="annual-report.htm">Annual Report</a></li><li><a href="faq.htm">FAQ</a></li></ul></div>
+      <div class="footer-col"><h5>Give</h5><ul><li><a href="donate.htm">Donate</a></li><li><a href="membership.htm">Membership</a></li><li><a href="give-monthly.htm">Give Monthly</a></li><li><a href="volunteer.htm">Volunteer</a></li><li><a href="contact.htm">Contact Us</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>&copy; 2026 Verdant Horizon. All rights reserved.</span><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Cookie Settings</a></div></div>
+  </footer>
+</body>
+</html>
